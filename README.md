@@ -10,7 +10,6 @@ This project is designed to help users practice and improve their typing skills 
 - Measures typing speed in words per minute (WPM)  
 - Calculates accuracy by comparing typed input with the target text  
 - Simple command-line interface, perfect for Windows CMD/PowerShell  
-- Lightweight and portable C code, great for learning C programming basics  
 
 ## How to Compile and Run
 
