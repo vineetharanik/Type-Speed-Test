@@ -22,7 +22,7 @@ int main() {
     // Set sentence based on choice
     switch(choose){
         case 1:
-            strcpy(target, "The quick brown fox jumps over lazy dog");
+            strcpy(target, "The quick brown fox jumps over the lazy dog");
             break;
         case 2:
             strcpy(target, "Despite repeated failures, persistence eventually transforms effort into mastery");
@@ -44,16 +44,33 @@ int main() {
 
     input[strcspn(input, "\n")] = '\0'; // Remove trailing newline
 
+    double time_taken = difftime(end, start); // Calculate time taken
+
     // Accuracy check
     if(strcmp(target, input) == 0) {
         printf("\n✅ Typing is accurate!\n");
+
+        if(time_taken < 15){
+             printf("You typed: %s\n", input);
+    printf("Time taken: %.2f seconds\n", time_taken);
+            printf("You are a Typing Ninja! 🥷\n");
+        }
+        else if(time_taken < 23){
+             printf("You typed: %s\n", input);
+    printf("Time taken: %.2f seconds\n", time_taken);
+            printf("You're a Pro! 😎\n");
+        }
+        else{
+             printf("You typed: %s\n", input);
+    printf("Time taken: %.2f seconds\n", time_taken);
+            printf("Keep practicing, Beginner! 💪\n");
+        }
     } else {
         printf("\n❌ There's a mismatch. Keep practicing!\n");
     }
 
-    double time_taken = difftime(end, start);
     printf("You typed: %s\n", input);
-    printf("Time taken: %.2f seconds\n", time_taken);
 
     return 0;
 }
+
